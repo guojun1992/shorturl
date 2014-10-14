@@ -34,3 +34,18 @@ function from62_to10($num) {
     }   
     return $dec;
 }
+/**
+	替换bamath
+**/
+
+function cry62($n){
+	$base = 62;  
+	$index = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';  
+	$ret = '';  
+	for($t = floor(log10($n) / log10($base)); $t >= 0; $t --) {  
+		$a = floor($n / pow($base, $t));  
+		$ret .= substr($index, $a, 1);  
+		$n -= $a * pow($base, $t);  
+	}  
+	return $ret;  
+}
