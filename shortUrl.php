@@ -35,7 +35,7 @@ function from62_to10($num) {
     return $dec;
 }
 /**
-	替换bamath
+	替换bcmath
 **/
 
 function cry62($n){
